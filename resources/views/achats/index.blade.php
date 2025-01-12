@@ -53,8 +53,8 @@
                             <td>{{ $achat->fournisseur->nom }}</td>
                             <td>{{ $achat->produit->nom }}</td>
                             <td>{{ $achat->quantite }}</td>
-                            <td>{{ number_format($achat->prix_unitaire) }} f</td>
-                            <td>{{ number_format($achat->montant_total) }} f</td>
+                            <td>{{ number_format($achat->prix_unitaire, 0, '.','.') }}</td>
+                            <td>{{ number_format($achat->montant_total, 0, '.','.') }}</td>
                             <td>
                                 <button class="btn btn-primary btn-sm" data-bs-toggle="modal"
                                     data-bs-target="#editAchatModal{{ $achat->id }}">

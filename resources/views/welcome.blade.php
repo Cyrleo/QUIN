@@ -92,7 +92,7 @@
                 <div class="card bg-primary text-white stats-card">
                     <div class="card-body text-center">
                         <h6 class="card-title mb-0">Ventes</h6>
-                        <strong>{{ number_format($totalVentes) }} f</strong>
+                        <strong>{{ number_format($totalVentes, 0, '.','.') }} f</strong>
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@
                 <div class="card bg-success text-white stats-card">
                     <div class="card-body text-center">
                         <h6 class="card-title mb-0">Achats</h6>
-                        <strong>{{ number_format($totalAchats) }} f</strong>
+                        <strong>{{ number_format($totalAchats, 0, '.','.') }} f</strong>
                     </div>
                 </div>
             </div>
@@ -108,7 +108,7 @@
                 <div class="card bg-info text-white stats-card">
                     <div class="card-body text-center">
                         <h6 class="card-title mb-0">Bénéfices</h6>
-                        <strong>{{ number_format($benefices) }} f</strong>
+                        <strong>{{ number_format($benefices, 0, '.','.') }} f</strong>
                     </div>
                 </div>
             </div>
@@ -155,7 +155,7 @@
                                                 {{ $ligne->produit->nom }} ({{ $ligne->quantite }})<br>
                                             @endforeach
                                         </td>
-                                        <td>{{ number_format($vente->montant_total) }}</td>
+                                        <td>{{ number_format($vente->montant_total, 0, '.','.') }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -179,7 +179,7 @@
                                         <td>{{ $achat->date->format('d/m/Y') }}</td>
                                         <td>{{ $achat->fournisseur->nom }}</td>
                                         <td>{{ $achat->produit->nom }}</td>
-                                        <td>{{ number_format($achat->montant_total) }}</td>
+                                        <td>{{ number_format($achat->montant_total, 0, '.','.') }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>

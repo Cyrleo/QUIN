@@ -48,7 +48,7 @@
                         <tr>
                             <td>{{ $vente->created_at->format('Y-m-d') }}</td>
                             <td>{{ $vente->client->nom }}</td>
-                            <td>{{ number_format($vente->montant_total) }}</td>
+                            <td>{{ number_format($vente->montant_total, 0, '.','.') }}</td>
                             <td>
                                 <button class="btn btn-info btn-sm" data-bs-toggle="modal"
                                     data-bs-target="#viewVenteModal{{ $vente->id }}">
@@ -162,7 +162,7 @@
                             <div class="col-md-6">
                                 <p><strong>Client:</strong> {{ $vente->client->nom }}</p>
                                 <p><strong>Date:</strong> {{ $vente->created_at->format('d/m/Y') }}</p>
-                                <p><strong>Montant Total:</strong> {{ number_format($vente->montant_total) }} FCFA</p>
+                                <p><strong>Montant Total:</strong> {{ number_format($vente->montant_total, 0, '.','.') }} FCFA</p>
                             </div>
                         </div>
 
@@ -182,8 +182,8 @@
                                         <tr>
                                             <td>{{ $ligne->produit->nom }}</td>
                                             <td>{{ $ligne->quantite }}</td>
-                                            <td>{{ number_format($ligne->prix_unitaire) }}</td>
-                                            <td>{{ number_format($ligne->quantite * $ligne->prix_unitaire) }}</td>
+                                            <td>{{ number_format($ligne->prix_unitaire, 0, '.','.') }}</td>
+                                            <td>{{ number_format($ligne->quantite * $ligne->prix_unitaire, 0, '.','.') }}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>
