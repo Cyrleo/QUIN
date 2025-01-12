@@ -23,7 +23,14 @@ class ProduitController extends Controller
             'stock_minimum' => 'required|integer|min:0'
         ]);
 
-        Produit::create($request->all());
+        Produit::create([
+            'nom' => $request->nom,
+            'prix_achat' => $request->prix_achat,
+            'prix_vente' => $request->prix_vente,
+            'quantite_stock' => $request->quantite_stock ?? 0,
+            'stock_minimum' => $request->stock_minimum
+        ]);
+
         return back()->with('success', 'Produit ajouté avec succès');
     }
 
