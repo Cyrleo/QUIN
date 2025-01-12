@@ -84,11 +84,11 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Prix d'achat</label>
-                            <input type="number" name="prix_achat" class="form-control" step="0.01" required>
+                            <input type="number" name="prix_achat" class="form-control"  required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Prix de vente</label>
-                            <input type="number" name="prix_vente" class="form-control" step="0.01" required>
+                            <input type="number" name="prix_vente" class="form-control"  required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Stock initial</label>
@@ -127,12 +127,12 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Prix d'achat</label>
-                                <input type="number" name="prix_achat" class="form-control" step="0.01" required
+                                <input type="number" name="prix_achat" class="form-control"  required
                                     value="{{ $produit->prix_achat }}">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Prix de vente</label>
-                                <input type="number" name="prix_vente" class="form-control" step="0.01" required
+                                <input type="number" name="prix_vente" class="form-control"  required
                                     value="{{ $produit->prix_vente }}">
                             </div>
                             <div class="mb-3">
