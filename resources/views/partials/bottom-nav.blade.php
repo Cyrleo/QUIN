@@ -68,10 +68,21 @@
         z-index: 1000;
     }
 
+    .bottom-nav .btn {
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+        font-size: 0.9em;
+    }
+
+    .bottom-nav .btn i {
+        font-size: 1.2em;
+        margin-bottom: 2px;
+    }
+
     .bottom-nav .dropdown-menu {
         width: 100vw;
         position: fixed;
-        bottom: 70px;
+        bottom: 60px;
         left: 0;
         margin: 0;
         padding: 15px;
@@ -101,7 +112,7 @@
     }
 
     .content-area {
-        margin-bottom: 70px;
+        margin-bottom: 60px;
         padding-bottom: 20px;
     }
 
