@@ -20,7 +20,7 @@ class ProduitController extends Controller
             'prix_achat' => 'required|numeric|min:0',
             'prix_vente' => 'required|numeric|min:0',
             'quantite_stock' => 'nullable|integer|min:0',
-            'stock_minimum' => 'required|integer|min:0'
+            'stock_minimum' => 'nullable|integer|min:0'
         ]);
 
         Produit::create([
@@ -28,7 +28,7 @@ class ProduitController extends Controller
             'prix_achat' => $request->prix_achat,
             'prix_vente' => $request->prix_vente,
             'quantite_stock' => $request->quantite_stock ?? 0,
-            'stock_minimum' => $request->stock_minimum
+            'stock_minimum' => $request->stock_minimum ?? 5
         ]);
 
         return back()->with('success', 'Produit ajouté avec succès');

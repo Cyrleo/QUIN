@@ -142,7 +142,7 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Stock minimum</label>
-                                <input type="number" name="stock_minimum" class="form-control" required
+                                <input type="number" name="stock_minimum" class="form-control" 
                                     min="0" value="{{ $produit->stock_minimum }}">
                             </div>
                         </div>
