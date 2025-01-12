@@ -92,7 +92,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Stock initial</label>
-                            <input type="number" name="quantite_stock" class="form-control" required min="0">
+                            <input type="number" name="quantite_stock" class="form-control" min="0">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Stock minimum</label>
