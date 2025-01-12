@@ -90,7 +90,7 @@
         function updateTotal() {
             const prix = parseFloat(document.getElementById('prix').value) || 0;
             const quantite = parseInt(document.getElementById('quantite').value) || 0;
-            document.getElementById('total').value = (prix * quantite).toFixed(2);
+            document.getElementById('total').value = (prix * quantite);
         }
         function goBack() {
             if (document.referrer) {

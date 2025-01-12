@@ -138,7 +138,7 @@
             const quantite = ligne.querySelector('.quantite').value;
             const prix = ligne.querySelector('.prix-unitaire').value;
             const montant = quantite * prix;
-            ligne.querySelector('.montant').value = montant ? montant.toFixed(2) : '';
+            ligne.querySelector('.montant').value = montant ? montant : '';
         }
 
         // Ajouter une première ligne de produit au chargement
