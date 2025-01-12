@@ -19,7 +19,7 @@ class ProduitController extends Controller
             'nom' => 'required',
             'prix_achat' => 'required|numeric|min:0',
             'prix_vente' => 'required|numeric|min:0',
-            'quantite_stock' => 'integer|min:0',
+            'quantite_stock' => 'nullable|integer|min:0',
             'stock_minimum' => 'required|integer|min:0'
         ]);
 
