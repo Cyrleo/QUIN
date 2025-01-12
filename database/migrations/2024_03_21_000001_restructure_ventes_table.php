@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('ventes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('client_id')->constrained();
-            $table->decimal('montant_total', 10, 2);
+            $table->integer('montant_total');
             $table->date('date');
             $table->timestamps();
         });

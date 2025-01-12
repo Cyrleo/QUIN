@@ -13,8 +13,8 @@ return new class extends Migration
             $table->foreignId('client_id')->constrained();
             $table->foreignId('produit_id')->constrained();
             $table->integer('quantite');
-            $table->decimal('prix_unitaire', 10, 2);
-            $table->decimal('montant_total', 10, 2);
+            $table->integer('prix_unitaire');
+            $table->integer('montant_total');
             $table->date('date');
             $table->timestamps();
         });

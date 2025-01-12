@@ -12,8 +12,8 @@ return new class extends Migration
             $table->id();
             $table->string('nom');
             $table->text('description')->nullable();
-            $table->decimal('prix_achat', 10, 2);
-            $table->decimal('prix_vente', 10, 2);
+            $table->integer('prix_achat');
+            $table->integer('prix_vente');
             $table->integer('quantite_stock')->default(0);
             $table->integer('stock_minimum')->default(5);
             $table->timestamps();

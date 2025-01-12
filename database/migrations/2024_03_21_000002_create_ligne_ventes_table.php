@@ -13,8 +13,8 @@ return new class extends Migration
             $table->foreignId('vente_id')->constrained()->onDelete('cascade');
             $table->foreignId('produit_id')->constrained();
             $table->integer('quantite');
-            $table->decimal('prix_unitaire', 10, 2);
-            $table->decimal('montant', 10, 2);
+            $table->integer('prix_unitaire');
+            $table->integer('montant');
             $table->timestamps();
         });
     }
