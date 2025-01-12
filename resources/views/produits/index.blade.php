@@ -55,7 +55,7 @@
                             <td>
                                 <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal"
                                     data-bs-target="#editProduitModal{{ $produit->id }}">
-                                    <i class="fas fa-edit"></i> 
+                                    <i class="fas fa-edit"></i>
                                 </button>
                             </td>
                         </tr>
@@ -137,8 +137,8 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Stock</label>
-                                <input type="number" name="quantite_stock" class="form-control" required
-                                    min="0" value="{{ $produit->quantite_stock }}">
+                                <input type="number" name="quantite_stock" class="form-control" min="0"
+                                    value="{{ $produit->quantite_stock }}">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Stock minimum</label>
