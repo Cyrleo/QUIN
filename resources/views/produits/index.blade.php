@@ -96,7 +96,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Stock minimum</label>
-                            <input type="number" name="stock_minimum" class="form-control" required min="0">
+                            <input type="number" name="stock_minimum" class="form-control" min="0">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -137,13 +137,13 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Stock</label>
-                                <input type="number" name="quantite_stock" class="form-control" min="0"
+                                <input type="number" name="quantite_stock" class="form-control" min="0" required
                                     value="{{ $produit->quantite_stock }}">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Stock minimum</label>
-                                <input type="number" name="stock_minimum" class="form-control" 
-                                    min="0" value="{{ $produit->stock_minimum }}">
+                                <input type="number" name="stock_minimum" class="form-control" min="0" required 
+                                    value="{{ $produit->stock_minimum }}">
                             </div>
                         </div>
                         <div class="modal-footer">
