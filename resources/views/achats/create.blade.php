@@ -50,7 +50,7 @@
             <div class="mb-3">
                 <label class="form-label">Prix unitaire</label>
                 <div class="input-group">
-                    <input type="number" name="prix_unitaire" class="form-control" required step="0.01"
+                    <input type="number" name="prix_unitaire" class="form-control" required
                         id="prix">
                     <span class="input-group-text">f</span>
                 </div>

@@ -121,7 +121,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Prix Unitaire</label>
                                 <input type="number" name="prix_unitaire" class="form-control"
-                                    value="{{ $achat->prix_unitaire }}" required min="0" step="0.01">
+                                    value="{{ $achat->prix_unitaire }}" required min="0">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Date</label>
