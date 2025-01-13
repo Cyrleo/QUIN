@@ -52,11 +52,41 @@
                             <i class="fas fa-truck-loading"></i> Fournisseurs
                         </a>
                     </li>
+                    <li>
+                        <a href="#" class="dropdown-item text-danger" data-bs-toggle="modal"
+                            data-bs-target="#logoutModal">
+                            <i class="fas fa-sign-out-alt text-danger"></i> Déconnexion
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
 </nav>
+
+<!-- Modal de déconnexion -->
+<div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="logoutModalLabel">Confirmation de déconnexion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                Êtes-vous sûr de vouloir vous déconnecter ?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                <form method="POST" action="{{ route('logout') }}" class="d-inline">
+                    @csrf
+                    <button type="submit" class="btn btn-danger">
+                        Se déconnecter
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 <style>
     .bottom-nav {
@@ -134,5 +164,28 @@
     .bottom-nav .btn.active {
         background-color: white !important;
         border: none !important;
+    }
+
+    /* Styles pour le modal */
+    .modal-content {
+        border-radius: 15px;
+        border: none;
+    }
+
+    .modal-header {
+        border-bottom: none;
+        padding: 20px;
+    }
+
+    .modal-body {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .modal-footer {
+        border-top: none;
+        padding: 20px;
+        justify-content: center;
+        gap: 10px;
     }
 </style>
